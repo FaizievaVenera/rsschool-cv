@@ -38,7 +38,7 @@ function submit(e) {
 [tocha-site](https://faizievavenera.github.io/tocha-site/#) - first project
 ***
 ### Education and courses:
-* **University:** Karagandy State Technical University
+* **University:** Qaragandy State Technical University
 * **Courses:**
     * [html.academy.ru](https://htmlacademy.ru) (in progress)      
     * RS Schools Course «JavaScript/Front-end» (in progress)   
