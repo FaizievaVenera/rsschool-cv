@@ -6,60 +6,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="./style.css">
+      <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>Faizieva Venera</title>
   </head>
+  <body>
   <header>
-
+<nav>
+  <ul class="header">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#languages">Languages</a></li>
+    
+  </ul>
+</nav>
   </header>
   <main>
-    <section class="left">
+    <div class="left">
       <article class="contact">
+        <div class="contact-2-columns">
       <img src="./images/foto.jpg" alt="foto" class="image">
+      <div class="contact__desc">
       <h1>Faizieva Venera</h1>
       <p class="position">Junior Frontend</p>
+    </div>
+    </div>
       <ul>
-        <li>E-mail: <a href="mailto:v.faizyeva@gmail.com">v.faizyeva@gmail.com</a></li>
-        <li>Discord: Faizieva Venera(#3239)</li>
+        <li>E-mail:&nbsp; <a href="mailto:v.faizyeva@gmail.com">v.faizyeva@gmail.com</a></li>
+        <li>Discord: Венера (#3239)</li>
         <li>Location: Kazan, Russia</li>
       </ul>
     </article>
-      <article class="skills">
+      <article class="skills" id="skills">
       <h2>Skills</h2>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>SASS</li>
-        <li>JavaScript</li>
-        <li>Git</li>
+        <li><img src="./images/html.png" alt="html">HTML</li>
+        <li><img src="./images/css.png" alt="css">CSS</li>
+        <li><img src="./images/sass.png" alt="sass">SASS</li>
+        <li><img src="./images/js.png" alt="js">JavaScript</li>
+        <li><img src="./images/github.svg" alt="git">GitHub </li>
+        <li><img src="./images/figma.svg" alt="figma">Figma</li>
       </ul>
     </article>
-    </section>
-    <section class="right"> 
+  </div>
+    <div class="right"> 
       <article class="about">
         <h2>About</h2>
         <p>I like to study and learn something new. I like to read books, do physical education, listen to music of different genres. I'm fond of good cars and bikes. I lead active and healhy lifestyle. I like to work and see the results of my work.
           Since childhood, I have had a predisposition to work with electronics and computers. I like to disassemble, assemble and configure something. I can build, configure, solve problems with computers.
+          </p>
+      </article>
+      <article class="education">
+        <h2>Education</h2>
+        <ul class="education_list" id="education">
+          <li><img src="./images/point.svg" alt="point">Karagangy State Technical Univercity</li>
+          <li>Automation and management</li>
+          <li><img src="./images/point.svg" alt="point">RSSchool</li>
+          <li>JS/FE Pre-School</li>
+        </ul>
+        </article>  
+        <article class="languages" id="languages">
+          <h2>Languages</h2>
+          <ul class="lang">
+            <li><img src="./images/point.svg" alt="point"> Russian - native speaker</li>
+            <li><img src="./images/point.svg" alt="point">English - A2</li>
+          </ul>
+        </article>
+        <article class="code">
+          <h2>Code example</h2> 
+          <pre>
+            <code>
+function submit(e) {
+  e.preventDefault();
+  for (let i = 0; i > inputRegister.length; i++) {
+  let currentInput = inputRegister[i];
+    if (currentInput.value === "") {
+      currentInput.classList.add("error");
+      const errorDiv = document.createElement("div");
+      errorDiv.textContent = "Введите данные";
+      let divInput = currentInput.parentElement;
+      errorDiv.classList.add("check");
+      divInput.appendChild(errorDiv);
+    } 
+  }
+}
+            </code>
+          </pre>     
+          </article>  
+      <article class="experience" id="projects">
+        <h2>My projects</h2>      
+        <a href="https://faizievavenera.github.io/tocha-site/#">
+        <div class="layout-2-columns">
+          <img src="./images/tocha.jpg" alt="tocha" class="project-img">
+          <div class="desc">
+            <p>Tocha site</p>
+            <div class="technologies">
+              <img src="./images/html.png" alt="html">
+              <img src="./images/css.png" alt="css">
+              <img src="./images/js.png" alt="js">
+            </div>
+          </div>  
+        </div>
+      </a>
+      <a href="https://rolling-scopes-school.github.io/faizievavenera-JSFE2022Q3/codejam/">
+        <div class="layout-2-columns">
+          <img src="./images/codejam.jpg" alt="codejam" class="project-img">
+          <div class="desc">
+            <p>Codejam</p>
+            <div class="technologies">
+              <img src="./images/html.png" alt="html">
+              <img src="./images/css.png" alt="css">
+              <img src="./images/js.png" alt="js">
+            </div>
+          </div>  
           
-          Skills</p>
+        </div></a>
+        <a href="https://faizievavenera.github.io/online-zoo/">
+          <div class="layout-2-columns">
+          <img src="./images/online.jpg" alt="online-zoo" class="project-img">
+          <div class="desc">
+            <p>Online-zoo</p>
+            <div class="technologies">
+              <img src="./images/html.png" alt="html">
+              <img src="./images/css.png" alt="css">
+              <img src="./images/js.png" alt="js">
+            </div>
+          </div>  
+        </div></a>
       </article>
-      <article class="experience">
-        <h2>My projects</h2>
-      </article>
-    </section>
+    </div>
   </main>
   <footer>
-    <div class="link"><a href="https://github.com/FaizievaVenera">
-      <object data="./images/github.svg" type="image/svg+xml" class="github-object">
-      </object>
-    </a>
-  </div>
-    <p>2022</p>
-  <div class="link">
     <a href="https://github.com/FaizievaVenera">
-      <object data="./images/rs_school_js.svg" type="image/svg+xml" class="rs-object">
-      </object>
-    </a>
+    <div class="link">
+      <img src="./images/github.svg" alt="github" class="github-object">
   </div>
+</a>
+    <p>2022</p>
+    <a href="https://rs.school/js/">
+    <div class="link">
+      <img src="./images/rs_school_js.svg" alt="rsschool" class="rs-object">
+  </div>
+</a>
   </footer>
-  <body></body>
+  </body>
 </html>

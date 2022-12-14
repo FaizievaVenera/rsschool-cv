@@ -10,26 +10,41 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+html{
+  box-sizing: border-box;
+ 
+}
 body{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  height: 100%;
-  max-width: 1160px;
   margin:0 auto;
+  max-width: 1160px;
+  min-height: 100vh;
+  display: flex;
+	flex-direction: column;
 }
-
+header{
+  background: #233a5f;
+}
+.header{
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.header a{
+  color: #fff;
+}
 main{
   display: flex;
-  
+  flex: 1 0 auto;
 }
 .left{
   background-color: #233a5f;
   color: #fff;
   width: 30%;
   padding: 41px 22px 0 22px;
-  min-height: calc(100vh - 116px);
+  max-height: 100%;
 }
 
 .image{
@@ -69,35 +84,173 @@ a:visited {
 h2{
   font-weight: 600;
   font-size: 22px;
-  margin-top:20px;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+.right h2::after{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #233a5f;
+}
+.skills{
+  margin-bottom: 10px;
+}
+.skills h2{
+  margin-bottom: 15px;
 }
 .right{
   padding: 42px 32px 0 32px;
   color: #233a5f;
   width: 70%;
 }
+.education_list li:nth-child(odd){
+  display: flex;
+}
+.education_list li:nth-child(even){
+  font-size: 16px;  
+  opacity: 0.8;
+  margin-bottom: 10px;
+  margin-left: 60px;
+}
+.layout-2-columns{
+  display: flex;
+  padding: 3px;
+  margin-top: 20px;
+  transition: all 1s;
+}
+.project-img{
+  display: block;
+  width: 269px;
+  border-radius: 20px;
+  height: max-content;
+  transition: all 0.5s;
+}
 
+.layout-2-columns:hover{
+  box-shadow: 0 0 10px#5c7caf;
+  border-radius: 20px;
+  }
+.layout-2-columns:hover .project-img{
+    transform: scale(1.05);
+  }
+.desc{
+    margin-left: 20px;
+    color:#233a5f;
+}
+.technologies img{
+width: 36px;
+}
+.experience{
+  margin-bottom: 20px;
+}
 
 footer{
   background-color: #233a5f;
   display: flex;
-  width: 1160px;
+  flex: 0 0 auto;
+  margin: 0 auto;
+  width: 100%;
   justify-content: space-around ;
   align-items: center;
-  position: absolute;
-	bottom: 0;
-  padding-bottom: 20px;
-  height: 117px;
+  padding-top: 10px;
+  padding-bottom: 20px; 
+}
+footer li, .lang li, .skills li{
+  margin-bottom:10px;
+  display: flex;
+}
+.skills li img{
+  margin-right: 10px;
+  width: 30px;
+  height: auto;
+  object-fit: cover;
+}
+.code{
+  max-width: 100%;
 }
 footer p{
   font-weight: 600;
-  font-size: 24px;
+  font-size: 22px;
   margin-top: 20px;
   color: #fff;
 }
+.link{
+  cursor: pointer;
+}
 .github-object{
-  width: 90px;
+  width: 70px;
 }
 .rs-object{
-  width: 150px;
+  width: 100px;
+}
+
+
+@media screen and (max-width:770px) {
+ main{
+  flex-direction: column;
+ }
+ .left,.right{
+  width:100%;
+}
+.right{
+  padding-top: 0;
+}
+
+.contact-2-columns{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.contact__desc{
+  margin-left: 20px;
+}
+.image{
+width:30%;
+}
+}
+@media screen and (max-width:550px){
+  body{
+    font-size: 12px;
+
+  }
+  h1{
+    font-size: 20px;
+  }
+  .position{
+    font-size: 16px;
+  }
+  h2{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  header{
+    display: none;
+  }
+  .education_list li:nth-child(even){
+    font-size: 10px;
+  }
+.layout-2-columns{
+  flex-direction: column;
+}
+.code{
+  font-size: 12px;
+  overflow-x: hidden;
+}
+.left,.right{
+  padding: 10px 12px;
+}
+.github-object{
+  width: 30px;
+}
+.rs-object{
+  width: 50px;
+}
+footer p{
+
+  font-size: 15px;
+}
 }
